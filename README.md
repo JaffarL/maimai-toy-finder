@@ -97,6 +97,6 @@ python scripts/build_release.py
 
 ## 参赛信息
 
-按 [2026 年活动规则](https://github.com/M-China/mcd-developer-innovation-challenge/blob/main/activityGuidelines.md)准备，作品形式为技能插件，真实调用麦当劳 MCP。报名截止为 **2026 年 10 月 25 日 23:59，北京时间**；正式参赛须公开个人 GitHub 仓库并提交报名 Issue。
+按 [2026 年活动规则](https://github.com/M-China/mcd-developer-innovation-challenge/blob/main/activityGuidelines.md)准备，作品形式为技能插件，真实调用麦当劳 MCP。项目已公开并提交[报名 Issue #657](https://github.com/M-China/mcd-developer-innovation-challenge/issues/657)。报名截止为 **2026 年 10 月 25 日 23:59，北京时间**；报名校验结果以官方回复为准。
 
 当前使用本地技能开发流程。WorkBuddy 专项奖励需要真实使用记录，后续采用 WorkBuddy 开发或验证时再据实补充 `workbuddy.md`。
