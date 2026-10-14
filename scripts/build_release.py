@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "maimai-toy-finder"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 TOP_FILES = ("SKILL.md", "README.md", "CONTEST_DECLARATION.md", "MCP_INTEGRATION.md",
              "mcp-config.example.json", "LICENSE", ".gitignore", ".gitattributes")
 FOLDERS = {"scripts": {".py"}, "references": {".json", ".md"}, "agents": {".yaml"},

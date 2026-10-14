@@ -2,13 +2,11 @@
 
 **看到喜欢的麦当劳玩具，发张图，找门店。**
 
-[下载安装包](https://github.com/JaffarL/maimai-toy-finder/releases) · [查看源码](https://github.com/JaffarL/maimai-toy-finder) · [参赛信息](docs/参赛信息.md)
+[下载安装包](https://github.com/JaffarL/maimai-toy-finder/releases/latest) · [查看源码](https://github.com/JaffarL/maimai-toy-finder)
 
 麦麦寻玩是装在 AI 客户端里的技能插件。上传玩具照片、包装图或社交平台截图，告诉它城市或商圈，客户端识别玩具系列，插件通过麦当劳官方 MCP 查询当地门店与套餐，给出可前往的门店名称、地址和查询时间。
 
-适合想找同款玩具的消费者、开心乐园餐玩具爱好者，以及安排亲子出行的家庭。匹配单位是**玩具系列**；结果表示查询时段内门店菜单提供该系列，具体角色由门店实际供应决定。
-
-这是由参赛者独立开发的麦当劳程序员节创意开发大赛参赛作品。使用提示与参赛声明见 [CONTEST_DECLARATION.md](CONTEST_DECLARATION.md)。
+适合想找同款玩具的消费者、开心乐园餐玩具爱好者，以及安排亲子出行的家庭。按**玩具系列**匹配门店，列出该系列对应的套餐和菜单时段。
 
 ## 使用效果
 
@@ -22,7 +20,7 @@
 
 ## 安装
 
-运行需要 **Python 3.10 或更新版本**，运行代码全部使用标准库。AI 客户端需要同时支持图片输入、加载本地技能与执行本地 Python 脚本。仅能看图的聊天窗口，还需要补齐技能或脚本执行能力。模型和图片理解由所用客户端提供，插件读取其识别结果。
+准备 **Python 3.10 或更新版本**，以及支持图片输入、本地技能和 Python 脚本执行的 AI 客户端。客户端负责识图，插件负责查店；查询脚本全部使用 Python 标准库。
 
 ### 1. 准备技能
 
@@ -32,9 +30,9 @@
 python scripts/install_skill.py
 ```
 
-安装器将技能复制到 `CODEX_HOME/skills/maimai-toy-finder`，未设置 `CODEX_HOME` 时使用用户目录下的 `.codex/skills`。已有同名目录时提示用户处理，保护原安装。安装后开启新会话加载技能。
+默认安装到用户目录下的 `.codex/skills/maimai-toy-finder`；设置了 `CODEX_HOME` 时使用该目录下的 `skills`。安装后开启新会话即可使用。更新已有版本时，先备份并移走旧技能目录，再运行安装器。
 
-其他支持本地技能的客户端：将整个文件夹导入其技能管理界面，并启用本地 Python 执行。各客户端的导入入口与模型额度以客户端自身说明为准。
+其他支持本地技能的客户端：将整个文件夹导入技能管理界面，并启用本地 Python 执行。
 
 ### 2. 配置麦当劳接口令牌
 
@@ -47,9 +45,9 @@ Remove-Variable 麦麦令牌
 python scripts/find_stores.py --doctor
 ```
 
-从该终端新启动的客户端可继承变量；已经打开的客户端不会自动继承。也可在 Windows 用户环境变量界面配置后重新打开客户端。真实令牌保留在个人运行环境中。
+设置后从该终端启动客户端，即可继承令牌。也可在 Windows 用户环境变量界面配置，再重新打开客户端。
 
-`mcp-config.example.json` 是比赛要求的脱敏 MCP 配置示例。本项目脚本直接读取环境变量，无需加载该 JSON；其他客户端的变量展开语法需按其文档适配。
+脚本通过环境变量 `MCD_MCP_TOKEN` 连接麦当劳 MCP；`mcp-config.example.json` 提供客户端配置参考。
 
 ### 3. 发图使用
 
@@ -65,7 +63,7 @@ python scripts/find_stores.py --doctor
 
 ## 命令行验证
 
-以下命令在项目根目录运行；图片识别由 AI 客户端执行，命令行负责验证系列到门店的查询。
+在项目根目录运行以下命令，按系列查店或发现当地玩具系列：
 
 ```powershell
 python scripts/find_stores.py --list-series
@@ -73,9 +71,9 @@ python scripts/find_stores.py --series spongebob-onepiece --city 南京市 --are
 python scripts/find_stores.py --discover --city 南京市 --area 新街口 --max-stores 5 --format json
 ```
 
-指定预计到店时间时，加 `--at "2026-10-14 12:00"`，请改为实际日期时间。默认查询当前菜单，早餐与午餐可能展示不同套餐。
+默认查询当前菜单。指定到店时间时，加 `--at "2026-10-14 12:00"`，将日期时间改为实际计划。
 
-默认检查最多 10 家，`--max-stores` 可设为 1～30。指定 `--area` 时按该范围查店；未指定时使用城市商圈表逐步查找，按门店编码去重。结果会说明发现与检查数量，便于判断覆盖范围。
+默认检查 10 家门店，`--max-stores` 可设为 1～30。用 `--area` 指定商圈，或按城市预设商圈查询；结果展示查询范围和匹配数量。
 
 ## 实现与验证
 
@@ -93,10 +91,4 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py
 ```
 
-发布包通过文件清单选取源码、技能与文档，生成到 `dist`。图鉴以链接引用麦当劳官方参考图片；代码许可见 [LICENSE](LICENSE)，图片、商标和角色权利归各权利人。
-
-## 参赛信息
-
-按 [2026 年活动规则](https://github.com/M-China/mcd-developer-innovation-challenge/blob/main/activityGuidelines.md)准备，作品形式为技能插件，真实调用麦当劳 MCP。项目已公开并提交[报名 Issue #657](https://github.com/M-China/mcd-developer-innovation-challenge/issues/657)。报名截止为 **2026 年 10 月 25 日 23:59，北京时间**；报名校验结果以官方回复为准。
-
-当前使用本地技能开发流程。WorkBuddy 专项奖励需要真实使用记录，后续采用 WorkBuddy 开发或验证时再据实补充 `workbuddy.md`。
+安装包生成到 `dist`。代码采用 [MIT 许可](LICENSE)。
