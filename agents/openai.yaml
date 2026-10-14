@@ -1,0 +1,4 @@
+interface:
+  display_name: "麦麦寻玩"
+  short_description: "发来玩具照片或截图，识别系列并查找当前城市提供该系列的麦当劳门店"
+  default_prompt: "使用 $maimai-toy-finder 识别这张玩具照片，并查找我指定城市的麦当劳门店。"

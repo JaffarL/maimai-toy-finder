@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "series": [
+    {
+      "id": "spongebob-onepiece",
+      "name": "海绵宝宝×航海王系列玩具",
+      "aliases": ["海绵宝宝×航海王", "海绵宝宝x航海王", "海绵宝宝X航海王", "海绵宝宝联名航海王", "海绵宝宝×海贼王", "海绵宝宝x海贼王"],
+      "official_codes": ["521991"],
+      "visual_hints": ["海绵宝宝角色与航海王服饰、道具的联名造型组合", "识别时同时核对海绵宝宝角色与航海王主题元素", "以官方系列参考图核实，角色身份用于辅助系列识别"],
+      "reference_images": [{"url": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521991_600.png", "source": "麦当劳 MCP query-meal-detail：门店1990675，商品521991"}],
+      "sources": ["https://github.com/M-China/mcd-mcp-server", "https://www.mcdonalds.com.cn/news/20261001-HM/"],
+      "verified_at": "2026-10-14T09:46:10+08:00",
+      "verification": "官方接口返回系列名称、商品编码和官方图片；各门店供应按查询时结果确定。"
+    }
+  ]
+}

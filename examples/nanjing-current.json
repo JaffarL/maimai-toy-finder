@@ -1,0 +1,42 @@
+{
+  "query": {
+    "city": "南京市",
+    "areas": [
+      "新街口"
+    ],
+    "series_id": "spongebob-onepiece",
+    "series_name": "海绵宝宝×航海王系列玩具",
+    "at": null
+  },
+  "checked_at": "2026-10-14T09:56:53+08:00",
+  "mode": "live",
+  "coverage": {
+    "discovered": 5,
+    "checked": 2,
+    "matched": 0,
+    "failed": 0,
+    "unknown": 0
+  },
+  "stores": [
+    {
+      "store_code": "1990346",
+      "name": "麦当劳南京新百餐厅",
+      "address": "中山南路1号A座负一层G-A-025号商铺",
+      "matches": [],
+      "status": "not_matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:56:51+08:00"
+    },
+    {
+      "store_code": "1990043",
+      "name": "麦当劳南京洪武餐厅",
+      "address": "洪武路119号",
+      "matches": [],
+      "status": "not_matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:56:53+08:00"
+    }
+  ],
+  "available_series": [],
+  "errors": []
+}

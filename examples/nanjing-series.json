@@ -1,0 +1,51 @@
+{
+  "query": {
+    "city": "南京市",
+    "areas": [
+      "新街口"
+    ],
+    "series_id": null,
+    "series_name": null,
+    "at": "2026-10-14 12:00"
+  },
+  "checked_at": "2026-10-14T09:56:39+08:00",
+  "mode": "live",
+  "coverage": {
+    "discovered": 5,
+    "checked": 2,
+    "matched": 0,
+    "failed": 0,
+    "unknown": 0
+  },
+  "stores": [
+    {
+      "store_code": "1990346",
+      "name": "麦当劳南京新百餐厅",
+      "address": "中山南路1号A座负一层G-A-025号商铺",
+      "matches": [],
+      "status": "not_matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:56:36+08:00"
+    },
+    {
+      "store_code": "1990043",
+      "name": "麦当劳南京洪武餐厅",
+      "address": "洪武路119号",
+      "matches": [],
+      "status": "not_matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:56:38+08:00"
+    }
+  ],
+  "available_series": [
+    {
+      "code": "521991",
+      "name": "海绵宝宝×航海王系列玩具",
+      "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521991_600.png",
+      "stores": [
+        "1990043"
+      ]
+    }
+  ],
+  "errors": []
+}

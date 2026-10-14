@@ -1,0 +1,117 @@
+{
+  "query": {
+    "city": "南京市",
+    "areas": [
+      "新街口"
+    ],
+    "series_id": null,
+    "series_name": "海绵宝宝×航海王系列玩具",
+    "at": "2026-10-14 12:00"
+  },
+  "checked_at": "2026-10-14T09:57:49+08:00",
+  "mode": "live",
+  "coverage": {
+    "discovered": 5,
+    "checked": 3,
+    "matched": 2,
+    "failed": 0,
+    "unknown": 0
+  },
+  "stores": [
+    {
+      "store_code": "1990346",
+      "name": "麦当劳南京新百餐厅",
+      "address": "中山南路1号A座负一层G-A-025号商铺",
+      "matches": [],
+      "status": "not_matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:57:46+08:00"
+    },
+    {
+      "store_code": "1990043",
+      "name": "麦当劳南京洪武餐厅",
+      "address": "洪武路119号",
+      "matches": [
+        {
+          "meal_code": "9900016057",
+          "meal_name": "汉堡开心乐园餐",
+          "menu_price": "23.5",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016058",
+          "meal_name": "鱼排堡开心乐园餐",
+          "menu_price": "24",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016056",
+          "meal_name": "麦乐鸡开心乐园餐",
+          "menu_price": "25",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016055",
+          "meal_name": "开心亲子双人餐",
+          "menu_price": "59.5",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        }
+      ],
+      "status": "matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:57:47+08:00"
+    },
+    {
+      "store_code": "1990762",
+      "name": "麦当劳南京青奥城市客厅餐厅",
+      "address": "中山东路145号1F-18、19商铺",
+      "matches": [
+        {
+          "meal_code": "9900016057",
+          "meal_name": "汉堡开心乐园餐",
+          "menu_price": "23.5",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016058",
+          "meal_name": "鱼排堡开心乐园餐",
+          "menu_price": "24",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016056",
+          "meal_name": "麦乐鸡开心乐园餐",
+          "menu_price": "25",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        },
+        {
+          "meal_code": "9900016055",
+          "meal_name": "开心亲子双人餐",
+          "menu_price": "59.5",
+          "toy_code": "521991",
+          "toy_name": "海绵宝宝×航海王系列玩具",
+          "evidence_tool": "query-meal-detail"
+        }
+      ],
+      "status": "matched",
+      "partial": false,
+      "checked_at": "2026-10-14T09:57:49+08:00"
+    }
+  ],
+  "available_series": [],
+  "errors": []
+}
